@@ -1,6 +1,9 @@
 #include <stdio.h>
 
-/* printing with puts instead of printf */
+/**
+ * main - Print using puts
+ * Return: Sucessful exit
+ */
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
