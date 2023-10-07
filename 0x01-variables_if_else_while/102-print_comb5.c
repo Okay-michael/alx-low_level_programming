@@ -12,7 +12,7 @@ int main(void)
 
 	for (nmb1 = 0; nmb1 <= 99; nmb1++)
 	{
-		for (nmb2 = nmb1; nmb2 <= 99; nmb++)
+		for (nmb2 = nmb1; nmb2 <= 99; nmb2++)
 		{
 			if (nmb1 != nmb2)
 			{
