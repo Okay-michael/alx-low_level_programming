@@ -18,10 +18,10 @@ int main(void)
 	{
 		if ((j % 3) == 0)
 		{
-			sum3 += i;
+			sum_3 += j;
 		} else if ((j % 5) == 0)
 		{
-			sum5 += j;
+			sum_5 += j;
 		}
 	}
 	t_sum = sum_3 + sum_5;
