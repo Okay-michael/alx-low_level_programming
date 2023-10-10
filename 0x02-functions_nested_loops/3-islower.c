@@ -12,7 +12,7 @@ int _islower(int c)
 	int max_char = 122;
 	int output;
 
-	if (c >= 97 && c <= 122)
+	if (c >= min_char && c <= max_char)
 		output = 1;
 	else
 		output = 0;
