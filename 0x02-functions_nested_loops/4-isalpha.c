@@ -1,4 +1,4 @@
-#include "main.h"
+i#include "main.h"
 
 /**
 * _isalpha - checks if a character is an alphabet
@@ -14,7 +14,7 @@ int _isalpha(int c)
 
 	if (c >= min_char && c <= max_char)
 	{
-		if (c < 91 && c > 96)
+		if (c < 91 || c > 96)
 		{
 			output = 1;
 		}
