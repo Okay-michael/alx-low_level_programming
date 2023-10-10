@@ -10,5 +10,6 @@ int print_sign(int n);
 void print_times_table(int n);
 void print_to_98(int n);
 int add(int n1, int n2);
+void times_table(void);
 
 #endif
