@@ -23,5 +23,5 @@ void print_line(int n)
 			break;
 		}
 	}
-	_putchar('\n')
+	_putchar('\n');
 }
