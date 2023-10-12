@@ -1,7 +1,7 @@
-nclude "main.h"
+#iinclude "main.h"
 
 /**
- * main - this test  function for positive or negative
+ * main - this function testss for positive or negative
  * Return: 0
  */
 
