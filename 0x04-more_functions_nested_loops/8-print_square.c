@@ -7,7 +7,6 @@
  *
  * Return: void
  */
-
 void print_square(int size)
 {
 	int i;
@@ -22,5 +21,5 @@ void print_square(int size)
 			_putchar('\n');
 		}
 	}
-	_putcar('\n');
+	_putchar('\n');
 }
