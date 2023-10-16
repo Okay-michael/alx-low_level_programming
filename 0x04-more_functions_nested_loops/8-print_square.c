@@ -3,29 +3,26 @@
 /**
  * print_square - prints a square
  *
- * @size: size of the square
+ * @n: size of the square
  *
  * Return: void
  */
-
-void print_square(int size)
+void print_square(int n)
 {
-	int i;
-	int j;
 
-	if (size >= 1)
+	int q = 0, qq;
+
+	while (q < n && n > 0)
 	{
-		for (i = 1; i <= size; i++)
+		qq = 0;
+		while (qq < n)
 		{
-			for (j = 1; j <= size; j++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
+			_putchar('#');
+			qq++;
 		}
+		_putchar('\n');
+		q++;
 	}
-	else
-	{
-		_putcar('\n');
-	}
+	if (q == 0)
+	_putchar('\n');
 }
