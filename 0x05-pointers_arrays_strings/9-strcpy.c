@@ -7,7 +7,7 @@
 * @src: the string source to be copied
 *
 * Return: char
-*
+*/
 char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
