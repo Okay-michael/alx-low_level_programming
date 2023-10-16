@@ -9,16 +9,22 @@
 */
 void rev_string(char *s)
 {
-	int length = 0;
+	int i, max, half;
+	char first, last;
 
-	while (s[length] != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
-		length++;
+		i++;
 	}
-
-	while (length >= 0)
+	max = i - 1;
+	half = max / 2;
+	while (half >= 0)
 	{
-		_putchar(s[length]);
-		length--;
+		first = s[max - half];
+		last = s[half];
+		s[half] = first;
+		s[max - half] = last;
+		half--;
 	}
 }
