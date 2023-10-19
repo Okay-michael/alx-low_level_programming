@@ -1,4 +1,13 @@
 #include "main.h"
+
+_strlen(char *strng)
+{
+	int n = 0;
+
+	while(strng[n])
+		n++;
+	return (n);
+}
 /**
  * _strcat - concatenates two strings,
  * @dest: destination.
@@ -7,21 +16,18 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int count = 0, count2 = 0;
+	int length = _strlen(dest) + _strlen(src) + 1;
+	char *new = malloc(sizeof(char) * length);
+	int k = 0;
 
-	while (*(dest + count) != '\0')
+	while(k < length)
 	{
-		count++;
+		if (k < _strlen(dest))
+			new[k] = dest[k];
+		else
+			new[k] = src[k - _strlen(dest)];
+		k++;
 	}
-
-	while (count2 >= 0)
-	{
-		*(dest + count) = *(src + count2);
-		if (*(src + count2) == '\0')
-			break;
-		count++;
-		count2++;
-	}
-	*dest = '\0';
-	return (dest);
+	new[k] = '\0';
+	return (char *new);
 }
