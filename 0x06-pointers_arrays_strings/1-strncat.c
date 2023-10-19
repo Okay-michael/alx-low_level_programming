@@ -1,33 +1,27 @@
 #include "main.h"
-
-_strlen(char *strng)
-{
-	int n = 0;
-
-	while(strng[n])
-		n++;
-	return (n);
-}
 /**
- * _strcat - concatenates two strings,
+ * _strncat - concatenates two strings,
  * @dest: destination.
  * @src: source.
+ * @n: amount of bytes used from src.
  * Return: the pointer to dest.
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
-	int length = _strlen(dest) + _strlen(src) + 1;
-	char *new = malloc(sizeof(char) * length);
-	int k = 0;
+	int count = 0, count2 = 0;
 
-	while(k < length)
+	while (*(dest + count) != '\0')
 	{
-		if (k < _strlen(dest))
-			new[k] = dest[k];
-		else
-			new[k] = src[k - _strlen(dest)];
-		k++;
+		count++;
 	}
-	new[k] = '\0';
-	return (char *new);
+
+	while (count2 < n)
+	{
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
+			break;
+		count++;
+		count2++;
+	}
+	return (dest);
 }
