@@ -25,6 +25,6 @@ int sqroot(int n, int j)
 int _sqrt_recursion(int n)
 {
 	int j = 1;
-	p = sqroot(n, i);
+	p = sqroot(n, j);
 	return (p);
 }
