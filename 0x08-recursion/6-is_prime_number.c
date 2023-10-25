@@ -1,13 +1,13 @@
 # include "main.h"
 
 /**
- * primeRecursive - this function checks if n is prime
- * @n: this number is check for primality
+ * primeRecursive - checks if n is prime
+ * @n: number is checked for primality
  * @div: this number derives from n and is used to
  * control the recursion
- * Return: this function returns a boolean value
+ * Return: this function returns 0 or 1
  */
-int primeRecursive(int n, int div)
+int is_prime_helper(int n, int div)
 {
 	if (n <= 1)
 		return (0);
@@ -15,15 +15,14 @@ int primeRecursive(int n, int div)
 		return (1);
 	if (n % div == 0)
 		return (0);
-	return (primeRecursive(n, div - 1));
+	return (is_prime_helper(n, div - 1));
 }
 
 /**
  * is_prime_number - this function checks if a passed argument is
  * prime
  * @n: this is the number that is to be tested
- * Return: this function returns a boolean value
- * depending on the passed argument
+ * Return: this function returns a boolean value 0 or 1
  */
 int is_prime_number(int n)
 {
@@ -31,5 +30,5 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
-	return (primeRecursive(n, n - 1));
+	return (is_prime_helper(n, n - 1));
 }
