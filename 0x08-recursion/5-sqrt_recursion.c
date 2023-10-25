@@ -17,7 +17,8 @@ int sqroot(int n, int j)
 }
 
 /**
- * _sqrt_recursion - this function seeks the the square root N
+ * _sqrt_recursion - this function seeks the the square root in N
+ * @n: this this number whose root we want to find
  * Return: this function return and integer value equal to the
  * root of n if it exits in the set of natural numbers, otherwise
  * it returns -1
