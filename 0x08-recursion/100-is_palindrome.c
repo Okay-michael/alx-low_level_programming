@@ -33,5 +33,5 @@ int is_palindrome(char *s)
 {
 	int length = strlen(s);
 
-	return (seedCompare(s, 0, length - 1));
+	return (SC(s, 0, length - 1));
 }
