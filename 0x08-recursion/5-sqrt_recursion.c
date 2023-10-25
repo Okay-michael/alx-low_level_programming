@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * sqr - searches through the integer class for sqrt of n
+ * sqroot - searches through the integer class for sqrt of n
  * @n: number whose square root is being searched
  * @j: this is actually the value used to control the recursion
  * Return: returns the square root of the number if
@@ -24,8 +24,6 @@ int sqroot(int n, int j)
  */
 int _sqrt_recursion(int n)
 {
-	int j = 1, int p;
-
-	p = sqroot(n, j);
-	return (p);
+	n = sqroot(n, 1);
+	return (n);
 }
