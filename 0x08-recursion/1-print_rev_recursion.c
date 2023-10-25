@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * _print_rev_recursion - this function prints a string
- * in reverse order
- * @s: this function accepts a pointer to a string
- * Return: this funtion returns void
+ * _print_rev_recursion - prints a string in reverse order
+ * @s: a pointer to a string
+ * Return: void
  */
 void _print_rev_recursion(char *s)
 {
