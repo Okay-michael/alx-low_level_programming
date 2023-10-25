@@ -1,7 +1,7 @@
 # include "main.h"
 
 /**
- * primeRecursive - checks if n is prime
+ * is_prime_helper - checks if n is prime
  * @n: number is checked for primality
  * @div: this number derives from n and is used to
  * control the recursion
