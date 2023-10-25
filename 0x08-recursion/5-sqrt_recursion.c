@@ -10,7 +10,7 @@
 int sqroot(int n, int j)
 {
 	if (j * j == n)
-		return (k);
+		return (j);
 	if (j * j < n)
 		return (sqr(n, j + 1));
 	return (-1);
