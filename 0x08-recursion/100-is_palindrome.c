@@ -1,8 +1,8 @@
-t#include "main.h"
+#include "main.h"
 #include <string.h>
 
 /**
- * seedCompare - this function actually does the major
+ * SC - this function actually does the major
  * work here by comparing the corresponding lefthand
  * entry and righthand entry of the string
  * @LHstart: this is the value that tells this function
@@ -13,13 +13,13 @@ t#include "main.h"
  * Return: this function return a boolean value depending
  * on the string passed
  */
-int seedCompare(char *s, int LHstart, int RHstart)
+int SC(char *s, int LHstart, int RHstart)
 {
 	if (RHstart < LHstart)
 		return (1);
 	if (s[RHstart] != s[LHstart])
 		return (0);
-	return (seedCompare(s, ++LHstart, --RHstart));
+	return (SC(s, ++LHstart, --RHstart));
 }
 
 /**
