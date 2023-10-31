@@ -1,5 +1,4 @@
 #include "main.h"
-#include "4-free_grid.c"
 
 /**
  * alloc_grid - returns a pointer to a grid
