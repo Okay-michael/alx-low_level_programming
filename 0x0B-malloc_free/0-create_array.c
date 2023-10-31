@@ -9,14 +9,15 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	unsigned int i = 0;
-	char *pter = NULL;
+	unsigned int i;
+	char *pter;
 
 	if (size <= 0)
 		return NULL;
-
-	pter = (char*)(malloc(size + 1));
-	for(; i < size;)
+	pter = (malloc(size));
+	if (pter == NULL)
+		return NULL;
+	for(i = 0; i < size; i++)
 		pter[i] = c;
 	return (pter);
 }
