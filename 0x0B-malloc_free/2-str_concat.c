@@ -40,7 +40,7 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; i < j; i++)
 	{
-		if ( i < _strlen(s1))
+		if ( i < (size_t)_strlen(s1))
 		{
 			pter[i] = s1[i];
 		}
