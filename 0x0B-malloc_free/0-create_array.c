@@ -17,7 +17,7 @@ char *create_array(unsigned int size, char c)
 	pter = (malloc(size));
 	if (pter == NULL)
 		return NULL;
-	for(i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 		pter[i] = c;
 	return (pter);
 }
