@@ -1,6 +1,29 @@
 #include "main.h"
 
 /**
+ * free_matrix - this function frees a grid
+ * @grid: this is the grid to be freed
+ * @height: this is the height of the grid
+ */
+void free_matrix(int **grid, int height)
+{
+	int i;
+
+	for (i = 0; i < height; i++)
+	{
+		if (grid[i] != NULL)
+		{
+			free(grid[i]);
+		}
+	}
+
+	if (grid != NULL)
+	{
+		free(grid);
+	}
+}
+
+/**
  * alloc_grid - returns a pointer to a grid
  * @width: this is the with of the grid
  * @height: this is the height of the grid
@@ -25,7 +48,7 @@ int **alloc_grid(int width, int height)
 		pter[i] = malloc(sizeof(int) * width);
 		if (pter[i] == NULL)
 		{
-			free_grid(pter, height);
+			free_matrix(pter, height);
 			return (NULL);
 		}
 		for (j = 0; j < width; j++)
