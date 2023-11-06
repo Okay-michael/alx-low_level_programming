@@ -1,5 +1,9 @@
 #include "dog.h"
 
+/**
+ * print_dog - prints out the fields of a struct dog
+ * @d: this is a pointer the struct dog variable
+ */
 void print_dog(struct dog *d)
 {
 	if (d != NULL)
