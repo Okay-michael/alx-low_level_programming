@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * premain - this function runs before main
+ * premain - runs before main
  */
 void __attribute__ ((constructor)) premain()
 {
