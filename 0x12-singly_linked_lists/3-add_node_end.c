@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * add_node_end - this function adds a node at the end of a linked list
+ * add_node_end - adds a node at the end of a linked list
  * @head: this is the character to print
  * @str: this is the string for the new node
  *
@@ -11,13 +11,13 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *pter;
+	list_t *ptr;
 	list_t *new;
 	int c;
 
-	pter = *head;
-	while (pter && pter->next != NULL)
-		pter = pter->next;
+	ptr = *head;
+	while (ptr && ptr->next != NULL)
+		ptr = ptr->next;
 	c = 0;
 	while (str[c] != '\0')
 		c++;
@@ -36,8 +36,8 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->len = c;
 	new->next = NULL;
 
-	if (pter)
-		pter->next = new;
+	if (ptr)
+		ptr->next = new;
 	else
 		*head = new;
 	return (new);
