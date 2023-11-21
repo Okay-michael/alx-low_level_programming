@@ -1,12 +1,12 @@
 #include "lists.h"
 
 /**
- * free_listint - this function frees the memories allocated
+ * free_listint - frees the memories allocated
  * @head: this is the pointer to the head of the list
  */
 void free_listint(listint_t *head)
 {
-	listint_t *tmpr;
+	listint_t *temp;
 
 	if (head == NULL)
 	{
@@ -14,9 +14,9 @@ void free_listint(listint_t *head)
 	}
 	while (head != NULL)
 	{
-		tmpr = head->next;
+		temp = head->next;
 		free(head);
-		head = tmpr;
+		head = temp;
 	}
 	free(head);
 }
