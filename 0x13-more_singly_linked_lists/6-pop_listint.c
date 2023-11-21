@@ -1,28 +1,27 @@
 #include "lists.h"
 
 /**
- * pop_listint - this function deletes the last node of a listint_t
- * linked list
- * @head: this is the head of the linked list
- * Return: this function returns the head pointing to the the node
+ * pop_listint - deletes the last node of a listint_t linked list
+ * @head: the head of the linked list
+ * Return: returns the head pointing to the the node
  * at nth position
  */
 int pop_listint(listint_t **head)
 {
-	listint_t *tmpr;
+	listint_t *temp;
 	int k;
 
 	if (head == NULL)
 	{
 		return (0);
 	}
-	tmpr = *head;
-	if (tmpr == NULL)
+	temp = *head;
+	if (temp == NULL)
 	{
 		return (0);
 	}
-	k = tmpr->n;
-	*head = tmpr->next;
-	free(tmpr);
+	k = temp->n;
+	*head = temp->next;
+	free(temp);
 	return (k);
 }
