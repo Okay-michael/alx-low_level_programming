@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
- * _reallo - this function reallocates memory for an array of pointers
+ * _reallo - reallocates memory for an array of pointers
  * to the nodes in a linked list
- * @list: this is the list to be appended to
- * @size: this is the size of the new list which is always one more
+ * @list: the list to be appended to
+ * @size: the size of the new list which is always one more
  * than the old list)
  * @new: new node to add to the list
  *
