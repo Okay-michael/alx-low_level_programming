@@ -3,15 +3,15 @@
 int _strlen(char *str);
 
 /**
- * append_text_to_file - this function appends text at the end of a file.
- * @filename: this parameter is the  file to be appended to.
+ * append_text_to_file - appends text at the end of a file.
+ * @filename: the  file to be appended to.
  * @text_content: this is the data to append into the file.
  * Return: 1 on success, -1 otherwise
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int file;
-	ssize_t n_ltrs;
+	ssize_t letterCounts;
 
 	if (!filename)
 		return (-1);
@@ -20,8 +20,8 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content)
 	{
-		n_ltrs = write(file, text_content, _strlen(text_content));
-		if (n_ltrs == -1)
+		letterCounts = write(file, text_content, _strlen(text_content));
+		if (letterCounts == -1)
 		{
 			close(file);
 			return (-1);
@@ -44,8 +44,7 @@ int _strlen(char *str)
 	int k = 0;
 
 	while (str[k])
-	{
 		k++;
-	}
+
 	return (k);
 }
