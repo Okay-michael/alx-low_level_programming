@@ -4,7 +4,7 @@
 void error_file(int file_from, int file_to, char *argv[]);
 
 /**
- * main - this is the entry point of the program
+ * main - the entry point of the program
  * @argc: number of arguments passed from the commandline
  * @argv: this is a list of all those arguments passed from
  * the commandline
@@ -14,7 +14,7 @@ void error_file(int file_from, int file_to, char *argv[]);
 int main(int argc, char *argv[])
 {
 	int src_file, dst_file, err_close;
-	ssize_t n_chars, nwr;
+	ssize_t charCounts, nwr;
 	char buf[1024];
 
 	if (argc != 3)
@@ -27,13 +27,13 @@ int main(int argc, char *argv[])
 	dst_file = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	error_file(src_file, dst_file, argv);
 
-	n_chars = 1024;
-	while (n_chars == 1024)
+	charCounts = 1024;
+	while (charCounts == 1024)
 	{
-		n_chars = read(src_file, buf, 1024);
-		if (n_chars == -1)
+		charCounts = read(src_file, buf, 1024);
+		if (charCounts == -1)
 			error_file(-1, 0, argv);
-		nwr = write(dst_file, buf, n_chars);
+		nwr = write(dst_file, buf, charCounts);
 		if (nwr == -1)
 			error_file(0, -1, argv);
 	}
